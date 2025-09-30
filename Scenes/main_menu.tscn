@@ -1,0 +1,91 @@
+[gd_scene load_steps=4 format=3 uid="uid://b53cjsx0by5ew"]
+
+[ext_resource type="Script" uid="uid://dvcmgey0hmyvh" path="res://Scripts/main_menu.gd" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://c2u52lvu4nbdd" path="res://1298880.png" id="2_48xlc"]
+[ext_resource type="Texture2D" uid="uid://bqqynuefkpi5f" path="res://download-removebg-preview (1).png" id="3_1ehe0"]
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_28flt")
+
+[node name="1298880" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(576, 323.99997)
+scale = Vector2(0.60156256, 0.6012951)
+texture = ExtResource("2_48xlc")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 94.0
+offset_right = 877.0
+offset_bottom = 256.0
+theme_override_colors/font_color = Color(0.16078432, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.38431373)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 60
+text = "Platformer Knight!"
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_direction = 2
+layout_mode = 0
+offset_left = 498.5
+offset_top = 200.0
+offset_right = 656.5
+offset_bottom = 576.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 35
+text = "Play!"
+icon = ExtResource("3_1ehe0")
+flat = true
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 21
+text = "Level Select"
+icon = ExtResource("3_1ehe0")
+flat = true
+icon_alignment = 1
+
+[node name="Button3" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 30
+text = "Settings"
+icon = ExtResource("3_1ehe0")
+flat = true
+icon_alignment = 1
+
+[node name="Button4" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 35
+text = "Quit"
+icon = ExtResource("3_1ehe0")
+flat = true
+icon_alignment = 1
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button4" to="." method="_on_button_4_pressed"]
