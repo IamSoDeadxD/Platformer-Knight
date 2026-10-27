@@ -36,9 +36,9 @@ The game uses free assets and is deployed on GitHub Pages, so you can play it wi
 
 ## Download for Windows
 
-A Windows executable is available in this repository for those who prefer to play locally.
+Download the Windows build from the [Releases](https://github.com/IamSoDeadxD/Platformer-Knight/releases) page.
 
-Download the normal `.exe` file along with any required game data files from the repository.
+Extract the ZIP file and run the game executable.
 
 ## Running the Project in Godot
 
